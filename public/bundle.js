@@ -25457,14 +25457,33 @@
 
 	var React = __webpack_require__(1);
 
+	var _require = __webpack_require__(159),
+	    Link = _require.Link;
+
 	var Nav = React.createClass({
 	  displayName: 'Nav',
 
 	  render: function render() {
 	    return React.createElement(
-	      'h2',
+	      'div',
 	      null,
-	      'Nav Component'
+	      React.createElement(
+	        'h2',
+	        null,
+	        'Nav Component'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/' },
+	        'Get Weather'
+	      ),
+	      ' |',
+	      React.createElement(
+	        Link,
+	        { to: '/about' },
+	        'About'
+	      ),
+	      React.createElement(Link, null)
 	    );
 	  }
 	});
