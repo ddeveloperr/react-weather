@@ -10,7 +10,7 @@ var Nav = React.createClass({
         <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold', color: 'red'}}>About</Link> |
         <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold', color: 'red'}}>Examples</Link>
         
-        <a href="#/about">Go to about</a>
+        
       </div>
       
     );
