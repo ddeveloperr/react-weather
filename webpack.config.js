@@ -7,11 +7,11 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx'
     },
     extensions: ['', '.js', '.jsx']
-  }, 
-  
+  },
   module: {
     loaders: [
       {
@@ -20,7 +20,7 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
-        exlude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/
       }
     ]
   }
