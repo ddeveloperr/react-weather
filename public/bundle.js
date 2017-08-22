@@ -57,8 +57,8 @@
 
 	var Main = __webpack_require__(222);
 	var Weather = __webpack_require__(224);
-	var About = __webpack_require__(227);
-	var Examples = __webpack_require__(228);
+	var About = __webpack_require__(225);
+	var Examples = __webpack_require__(226);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -25505,17 +25505,31 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var WeatherForm = __webpack_require__(225);
-	var WeatherMessage = __webpack_require__(226);
+	var WeatherForm = __webpack_require__(227);
+	var WeatherMessage = __webpack_require__(228);
 
 	var Weather = React.createClass({
 	    displayName: 'Weather',
 
+	    getInitialState: function getInitialState() {
+	        return {
+	            location: 'Mekka',
+	            temp: 33
+	        };
+	    },
 
 	    handleSearch: function handleSearch(location) {
-	        alert(location);
+	        this.setState({
+	            location: location,
+	            temp: 33
+	        });
 	    },
 	    render: function render() {
+	        var _state = this.state,
+	            location = _state.location,
+	            temp = _state.temp;
+
+
 	        return React.createElement(
 	            'div',
 	            null,
@@ -25525,7 +25539,7 @@
 	                'Weather Component!'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	            React.createElement(WeatherMessage, null)
+	            React.createElement(WeatherMessage, { location: location, temp: temp })
 	        );
 	    }
 	});
@@ -25534,6 +25548,48 @@
 
 /***/ }),
 /* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var About = React.createClass({
+	    displayName: 'About',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h3',
+	            null,
+	            'About Component!'
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Examples = React.createClass({
+	    displayName: 'Examples',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h3',
+	            null,
+	            'Examples Component!'
+	        );
+	    }
+	});
+
+	module.exports = Examples;
+
+/***/ }),
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25575,7 +25631,7 @@
 	module.exports = WeatherForm;
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25586,57 +25642,24 @@
 	  displayName: 'WeatherMessage',
 
 	  render: function render() {
+	    var _props = this.props,
+	        location = _props.location,
+	        temp = _props.temp;
+
+
 	    return React.createElement(
 	      'h3',
 	      null,
-	      'It\'s fake static data.'
+	      'It\'s it ',
+	      temp,
+	      ' in ',
+	      location,
+	      '.'
 	    );
 	  }
 	});
 
 	module.exports = WeatherMessage;
-
-/***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var About = React.createClass({
-	    displayName: 'About',
-
-	    render: function render() {
-	        return React.createElement(
-	            'h3',
-	            null,
-	            'About Component!'
-	        );
-	    }
-	});
-
-	module.exports = About;
-
-/***/ }),
-/* 228 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Examples = React.createClass({
-	    displayName: 'Examples',
-
-	    render: function render() {
-	        return React.createElement(
-	            'h3',
-	            null,
-	            'Examples Component!'
-	        );
-	    }
-	});
-
-	module.exports = Examples;
 
 /***/ })
 /******/ ]);
