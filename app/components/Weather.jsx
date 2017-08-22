@@ -6,8 +6,8 @@ var openWeatherMap = require('openWeatherMap');
 var Weather = React.createClass({
   getInitialState: function () {
     return {
-        location: 'Miami',
-        temp: 88
+        // No default messages!
+        isLoading: false
     }
   },
   handleSearch: function (location) {

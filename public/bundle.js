@@ -25514,8 +25514,8 @@
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      location: 'Miami',
-	      temp: 88
+	      // No default messages!
+	      isLoading: false
 	    };
 	  },
 	  handleSearch: function handleSearch(location) {
