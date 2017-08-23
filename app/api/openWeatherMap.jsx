@@ -1,6 +1,7 @@
 var axios = require('axios');
-// units=metric is for Celsius unit
+// units=metric is for Celsius unit (EU)
 const OPEN_WEATHER_MAP_URL = 'https://api.openweathermap.org/data/2.5/weather?APPID=b0d94ac3d2c66d73c3b095716e2ca43c&units=metric';
+// units=imperial is for F unit (US)
 // const OPEN_WEATHER_MAP_URL = 'https://api.openweathermap.org/data/2.5/weather?APPID=b0d94ac3d2c66d73c3b095716e2ca43c&units=imperial';
 // b0d94ac3d2c66d73c3b095716e2ca43c
 
