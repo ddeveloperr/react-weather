@@ -4,11 +4,11 @@ var {Link} = require('react-router');
 var Examples = (props) => {
         return(
             <div>
-              <h1 className="text-center">Examples</h1>
+              <h2 className="text-center">Examples</h2>
                 <p>Here are a few example locations to try out:</p>
                 <ol>
                 <li>
-                <Link to='/?location=Philadelphia'>Philadelphia, PA</Link>
+                <Link to='/?location=Sarajevo'>Sarajevo, Bosnia</Link>
                 </li>
                 <li>
                 <Link to='/?location=Rio'>Rio, Brazil</Link>
