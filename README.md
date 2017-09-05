@@ -1,2 +1,2 @@
 # react-weather
-live: https://vast-brook-57386.herokuapp.com/
+live: https://reactjs-weather-live.herokuapp.com/
